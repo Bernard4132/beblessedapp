@@ -36,8 +36,8 @@ def oneoffdonation
 	
 end
 
-def monthlydonation
-	
+def goodsdonation
+	@good = Good.new
 end
 
 def yearlydonation
@@ -60,9 +60,48 @@ def howtohelp
 	
 end
 
-def volunteer
+def volunteerhelp
+	@volunteer = Volunteer.new
+end
+
+def boardpresident
+	
+end
+
+def boardsecretary
+	
+end
+
+def boardtreasurer
+	
+end
+
+def boardmember1
+
+end
+
+def boardmember2
+	
+end
+
+def boardmember3
+	
+end
+
+def boardmember4
 	
 end
 
 
 end
+
+
+
+
+
+
+
+
+
+
+

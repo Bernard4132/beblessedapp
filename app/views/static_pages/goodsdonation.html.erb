@@ -77,38 +77,75 @@
 
 </style>
 
-<section class="aduins">
-      <div class="container">
-        <div class="row" style="margin-top: 70px">
-          <div class="col-lg-12">
-            <h1 style="font-family: 'Raleway', sans-serif;" class="aduinsh1">
-              Donate Today!
-            </h1>
-           <!--  <p style="" class="aduinsp1">
-              To be the best in business education and business research in Africa
-            </p> -->
-          </div>
-        </div>
-      </div>
-    </section>
 
-<section class="py-5 aboutwistech">
+
+<section class="py-5 aboutwistech" style="margin-top: 70px;">
       <div class="container">
        
         <div class ="row">
           <div class="col-lg-9 col-sm-12">
              <h2 style="font-family: 'Raleway', sans-serif; text-align: left; color: #fd5d65; font-size: 25px;" class="js-reveal">
-         Donate to Help a Great Cause</h2>
+         Donate Goods to Help a Great Cause</h2>
         <hr align="left" width="10%" class="divederlined">
            <p style="font-weight: 300; font-size: 14px; line-height: 25px; text-align: left; color: #000000; font-family: 'Exo 2', sans-serif;" class="js-reveal">
-           Your donation supports “Be a Blessing Mission” poverty fighting work in the African continent. Be a Blessing Mission delivers lasting change to some of the African’s poorest communities. We place a special focus on working alongside Charitable Organizations that supports orphans/children. <br><br>
-            Your contribution is tax-deductible.  Be a Blessing Mission is a non-profit 501(C) ( 3) public charity 
+           WHEN YOU DONATE goods to “BE A BLESSING MISSION” those items are shipped to Africa. Most of the donated goods are given to orphanages and schools. Then the rest are sold and the proceeds are used as education fund for the brilliant but needy student, community projects, etc. 
            </p>
-           <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YVJXSVJ6SPFLQ" target="_blank" class="btn btn-lg btn-success">Donate to a Worthy Cause</a></p>
-          </div>
+           <ul style="font-weight: 300; font-size: 14px; line-height: 25px; text-align: left; color: #000000; font-family: 'Exo 2', sans-serif;">
+           	<li>Clothing & Shoes</li>
+           	<li>Furniture</li>
+           	<li>Household Goods</li>
+           	<li>Electrical appliances</li>
+           </ul>
+           
           <div class="col-lg-3 col-sm-12">
            <!--  <img src="logowebbie.png" width="200px" height="200px" class="img-fluid"> -->
+          </div>
+          <div class="col-lg-12">
+          	<div class="row">
+          		<h5>Enter your details and Goods you are Donationg</h5><br>
+          		<div class="col-lg-9">
+          			<%= form_for(@good) do |f| %>
+  <% if @good.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@good.errors.count, "error") %> prohibited this good from being saved:</h2>
+
+      <ul>
+      <% @good.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label>Name</label>
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Your Name" %>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Your Email" %>
+  </div>
+
+  <div class="form-group">
+    <label>Phone number</label>
+    <%= f.text_field :phone, :class => "form-control", :placeholder => "Your Phone number" %>
+  </div>
+
+  <div class="form-group">
+    <label>Items to Donate</label>
+    <%= f.text_area :itemsdonate, :class => "form-control", :placeholder => "What items are you going to donate?" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Submit", :class => "btn btn-primary" %>
+  </div>
+<% end %>
+          		</div>
+          	</div>
           </div>
         </div>
       </div>
     </section>
+
+
