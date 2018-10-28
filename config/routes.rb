@@ -26,4 +26,5 @@ Rails.application.routes.draw do
   match '/howtohelp' , to: 'static_pages#howtohelp', via: 'get'
   match '/faqs' , to: 'static_pages#faqs', via: 'get'
   match '/volunteerhelp' , to: 'static_pages#volunteerhelp', via: 'get'
+  match '/projectone' , to: 'static_pages#projectone', via: 'get'
 end
